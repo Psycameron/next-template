@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --light: #ffffff;
+  --dark: #171717;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--dark);
+  background: var(--light);
+  /* font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.22;
+  letter-spacing: 0;
+  overflow-x: hidden;
+  position: relative; */
+}
+
+@layer utility {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .container {
+    @apply mx-auto max-w-[1440px] px-4 lg:px-15; /* Change styles */
+  }
+
+  .focus-visible-default {
+    @apply focus-visible:ring-amber-600 focus:outline-none focus-visible:ring-2; /* Change styles */
+  }
+}
