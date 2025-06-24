@@ -28,7 +28,9 @@
     "^@/helpers(.*)$",
     "^@/regex(.*)$",
     "",
-    "^[.]"
+    "^[.]",
+    "^(?!.*[.]css$)[./].*$",
+    ".css$"
   ],
   "importOrderCaseSensitive": true,
   "importOrderSortSpecifiers": true
