@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 
-import { cn } from "@/util/cn";
+import { cn } from "@/utils/cn";
 
-interface PrimaryButtonProps {
+interface IBaseButtonProps {
   children: ReactNode;
   href?: string;
   onClick?: () => void;
@@ -16,7 +16,7 @@ interface PrimaryButtonProps {
   external?: boolean;
 }
 
-const PrimaryButton = ({
+const BaseButton = ({
   children,
   href,
   onClick,
@@ -27,7 +27,7 @@ const PrimaryButton = ({
   isLoading,
   ariaLabel,
   external = false,
-}: PrimaryButtonProps) => {
+}: IBaseButtonProps) => {
   const baseStyles = cn(
     "group relative flex text-sm leading-[20px] font-medium items-center justify-center overflow-hidden rounded-full w-full py-[18px] transition duration-300 ease-out active:scale-95",
     variant === "dark" &&
@@ -91,4 +91,4 @@ const PrimaryButton = ({
   );
 };
 
-export default PrimaryButton;
+export default BaseButton;

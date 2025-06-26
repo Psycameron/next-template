@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-import { cn } from "@/util/cn";
+import { cn } from "@/utils/cn";
 
 interface BackdropProps {
   isVisible: boolean;
